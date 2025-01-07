@@ -1,0 +1,31 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "compilerOptions": {
+    "target": "ES6", // compile 後要支援到的 ES6 版本
+    "module": "ESNext", // compile 後程式碼會用 ESNext 來處理模組的匯出匯入
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@style/*": ["./src/assets/style/*"],
+      "@imgs/*": ["./src/assets/imgs/*"],
+      "@components/*": ["./src/components/*"],
+      "@layout/*": ["./src/components/layout/*"],
+      "@shared/*": ["./src/components/shared/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@stores/*": ["./src/stores/*"],
+      "@plugins/*": ["./src/plugins/*"],
+    },
+    /* Linting */
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true, // 確保 switch case 都會有 break 或 return
+    "noUncheckedSideEffectImports": true,
+    "forceConsistentCasingInFileNames": true // 確保檔案的大小寫一致，避免某些作業系統對大小寫不敏感
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"]
+}
