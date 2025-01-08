@@ -1,0 +1,32 @@
+.mx-input {
+  @apply h-[51px] text-base w-full rounded-[10px] bg-neutral px-5 outline-none shadow-none border-none text-black;
+}
+
+.mx-input::placeholder {
+  @apply text-neutral;
+}
+
+.mx-icon-calendar {
+  @apply hidden;
+}
+
+.mx-input:disabled,
+.mx-input.disabled {
+  @apply bg-neutral text-neutral;
+}
+
+.mx-calendar-content .cell.active {
+  @apply bg-primary-light text-black;
+}
+
+.mx-table-date .today {
+  @apply text-primary-dark font-bold;
+}
+
+.mx-calendar-header-label, .mx-btn {
+  @apply text-sm font-bold;
+}
+
+.mx-table-date td, .mx-table-date th{
+  @apply text-sm;
+}

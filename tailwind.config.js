@@ -2,29 +2,21 @@
 export default {
   content: ['./index.html', './src/**/*.{vue,js,ts,jsx,tsx}'],
   safelist: [
-    'bg-primary',
-    'bg-secondary',
-    'bg-warning',
-    'bg-danger',
-    'bg-success',
-    'bg-info',
-    'bg-neutral',
-    'bg-neutral-entry',
-    'bg-neutral-secondary',
   ],
   theme: {
     extend: {
-      backgroundImage: () => ({
-        'gradient-primary': `linear-gradient(90deg,#4CAAF5,#28B4BE,#28B4BE,#4CAAF5)`,
-        'gradient-header': `linear-gradient(to right, #008FC7, #009E9C)`,
-        'gradient-cardHeader': `linear-gradient(to bottom, #1489D1, #20B6B2)`,
-      }),
+      gridTemplateColumns: {
+        24: 'repeat(24, minmax(0, 1fr))', // 定義 24 列
+      },
+      gridColumn: {
+        'span-19': 'span 19 / span 19',
+      }
     },
 
     screens: {
       md: '768px',
       lg: '992px',
-      xl: '1200px',
+      xl: '1280px',
       xxl: '1366px',
     },
 
@@ -34,57 +26,41 @@ export default {
         md: '720px',
         lg: '872px',
         xl: '1088px',
-        xxl: '1200px',
+        xxl: '1280px',
       },
     },
 
     colors: {
       transparent: 'transparent',
       white: '#FFFFFF',
-      black: '#333333',
+      black: '#000000',
       primary: {
-        DEFAULT: '#4CAAF5',
-        light: '#69B7F5',
-      },
-      secondary: {
-        DEFAULT: '#73B5EA',
-      },
-      warning: {
-        DEFAULT: '#FAAD14',
-        light: '#FFFFF2',
-      },
-      danger: {
-        DEFAULT: '#F77878',
-        light: '#FFEDED',
-      },
-      info: {
-        DEFAULT: '#1589D1',
-        light: '#F2F8FF',
-      },
-      success: {
-        DEFAULT: '#52C41A',
+        DEFAULT: '#A1FFC7',
+        light: '#E7FFE9',
+        dark: '#81F8B1',
       },
       neutral: {
-        DEFAULT: '#6A6A6A',
-        secondary: '#788088',
-        entry: '#D9D9D9',
-        light: '#FAFAFA',
+        DEFAULT: '#EBEBEB',
+        secondary: '#888888',
       },
     },
 
     fontSize: {
-      sm: ['12px', '18px'],
-      base: ['14px', '20px'],
-      lg: ['16px', '24px'],
-      xl: ['18px', '26px'],
-      '2xl': ['20px', '30px'],
-      '3xl': ['24px', '32px'],
-    },
-
-    fontFamily: {
-      mark: ['SimSun', 'sans-serif'],
+      sm: ['14px', '14px'],
+      base: ['20px', '20px'],
     },
   },
 
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        // 用於Sidebar的三角形
+        '.triangle': {
+          'border-top': '24px solid transparent',
+          'border-right': '24px solid white',
+          'border-bottom': '24px solid transparent',
+        },
+      })
+    },
+  ],
 }

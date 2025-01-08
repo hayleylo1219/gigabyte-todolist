@@ -3,9 +3,6 @@ import type { RouteRecordRaw } from 'vue-router'
 
 import HomeView from '../App.vue'
 import IndexView from '@pages/Index.vue'
-import DemoView from '@pages/Demo.vue'
-import ErrorView from '@pages/Error.vue'
-import PageNotFoundView from '@pages/PageNotFound.vue'
 
 const routes: Array<RouteRecordRaw> = [
   { path: '/', 
@@ -19,10 +16,7 @@ const routes: Array<RouteRecordRaw> = [
         component: IndexView,
       },
   ] 
-}, 
-{ path: '/demo', name: 'Demo', component: DemoView }, 
-  { path: '/server-error', name: 'ServerError', component: ErrorView },
-  { path: '/:pathMatch(.*)*', name: 'PageNotFound', component: PageNotFoundView },
+},
 ]
 
 const router = createRouter({

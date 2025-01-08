@@ -116,9 +116,7 @@ $ npm install
 $ npm run dev
 ```
 
-> 接著瀏覽至 `http://localhost:8200/` (注意 Port 號可能不同，以 console 輸出顯示的為準) 即可看到網站。當原始碼有異動時，網站會自動 Hot Reload。
-
 ## 其他
 
-1. 本專案初始架構是透過 [Vite](https://vitejs.dev/) 3.1.8 生成。
+1. 本專案初始架構是透過 [Vite](https://vitejs.dev/) 6.0.5 生成。
 2. 可透過 `vue --help` 來獲得更多幫助。

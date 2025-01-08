@@ -7,7 +7,7 @@ const loading = computed(() => loadingStore.getLoading)
 </script>
 
 <template>
-  <div v-if="loading" class="fixed bottom-0 left-0 right-0 top-0 z-[9999] bg-[#FFFFFF98]">
+  <div v-if="loading" class="fixed bottom-0 left-0 right-0 top-0 z-[9999] bg-white bg-opacity-50">
     <div class="absolute left-[calc((100%-35px)/2)] top-[calc((100%-36px)/2)]">
       <div class="cssload-box-loading"></div>
     </div>
@@ -43,10 +43,10 @@ const loading = computed(() => loadingStore.getLoading)
   -moz-animation: shadow 0.58s linear infinite;
 }
 .cssload-box-loading:after {
+  @apply bg-primary;
   content: '';
   width: 35px;
   height: 36px;
-  background: #68a8ef;
   position: absolute;
   top: 0;
   left: 0;

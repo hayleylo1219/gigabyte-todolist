@@ -16,6 +16,7 @@
     "axios": "^1.7.9",
     "pinia": "^2.3.0",
     "vue": "^3.5.13",
+    "vue-datepicker-next": "^1.0.3",
     "vue-router": "^4.5.0"
   },
   "devDependencies": {
@@ -39,6 +40,7 @@
     "vite": "^6.0.5",
     "vite-plugin-html": "^3.2.2",
     "vite-svg-loader": "^5.1.0",
-    "vue-tsc": "^2.2.0"
+    "vue-tsc": "^2.2.0",
+    "vue-uuid": "^3.0.0"
   }
 }
