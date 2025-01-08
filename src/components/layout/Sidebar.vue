@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
 import { v4 as uuidv4 } from 'uuid'
 import { useLoadingStore } from '@/stores/useLoading'
 import { useTodoItemStore } from '@/stores/useTodoItem'
